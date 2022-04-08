@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {
-        System.setProperties("reactor.netty.http.server.accessLogEnabled", "true");
+        System.setProperty("reactor.netty.http.server.accessLogEnabled", "true");
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
 
