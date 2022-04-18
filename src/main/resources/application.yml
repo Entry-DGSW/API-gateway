@@ -27,6 +27,10 @@ spring:
         connect-timeout: 1000
         response-timeout: 1000ms
       routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth-service/**
         - id: user-service
           uri: lb://user-service
           predicates:
