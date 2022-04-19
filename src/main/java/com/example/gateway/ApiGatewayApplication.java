@@ -14,5 +14,4 @@ public class ApiGatewayApplication {
         System.setProperty("reactor.netty.http.server.accessLogEnabled", "true");
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
-
 }

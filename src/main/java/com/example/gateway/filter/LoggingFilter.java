@@ -24,7 +24,7 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
             ServerHttpResponse response = exchange.getResponse();
 
             if (config.isPreLogger()) {
-                log.info("Loggin start : request id -> {}", request.getId());
+                log.info("Logging start : request id -> {}", request.getId());
             }
 
             return chain.filter(exchange).then(Mono.fromRunnable(() -> {
