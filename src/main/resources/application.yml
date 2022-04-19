@@ -24,8 +24,8 @@ spring:
       enabled: false
     gateway:
       httpclient:
-        connect-timeout: 1000
-        response-timeout: 1000ms
+        connect-timeout: 10000
+        response-timeout: 5s
       routes:
         - id: auth-service
           uri: lb://auth-service
@@ -52,7 +52,7 @@ spring:
               - DELETE
             exceptions:
               - java.net.ConnectException
-        - name: LoggingFilter
-          args:
-            preLogger: true
-            postLogger: true
+#        - name: LoggingFilter
+#          args:
+#            preLogger: true
+#            postLogger: true
