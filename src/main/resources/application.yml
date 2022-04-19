@@ -52,3 +52,7 @@ spring:
               - DELETE
             exceptions:
               - java.net.ConnectException
+        - name: LoggingFilter
+          args:
+            preLogger: true
+            postLogger: true
